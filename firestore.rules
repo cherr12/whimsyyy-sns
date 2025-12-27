@@ -1,0 +1,20 @@
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /posts/{postId} {
+      // Any authenticated user can read all posts
+      allow read: if request.auth != null;
+      
+      // Only authenticated users can create posts
+      allow create: if request.auth != null;
+      
+      // Only the author can update or delete their own post
+      // Note: We'd normally check resource.data.author.id == request.auth.uid
+      allow update, delete: if request.auth != null && (resource.data.author.id == request.auth.uid);
+      
+      // Simple like increment rule (could be more complex to prevent multiple likes)
+      allow update: if request.auth != null && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes', 'comments', 'commentsList']);
+    }
+  }
+}
