@@ -13,11 +13,15 @@ export default defineConfig(({ mode }) => {
     build: {
       target: 'esnext',
       minify: 'esbuild',
+      sourcemap: false,
       rollupOptions: {
         output: {
           manualChunks: undefined,
         },
       },
+    esbuild: {
+      drop: ['console', 'debugger'],
+    },
     },
       plugins: [react()],
       define: {
