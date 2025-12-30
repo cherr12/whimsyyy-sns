@@ -154,14 +154,6 @@ const Sidebar: React.FC<SidebarProps> = ({
             </button>
         ) : (
             <div className="flex flex-col gap-2">
-                {/* Always visible Sign In button for testing */}
-                <button 
-                    onClick={onTogglePublicView}
-                    className="w-full flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary hover:bg-primary/20 rounded-xl transition-colors mb-2 border border-primary/20"
-                >
-                    <LogIn size={20} />
-                    <span className="font-medium">Sign In</span>
-                </button>
 
                 {/* HIDDEN ADMIN LOGIN - Revealed by secret state */}
                 {showAdminLogin && (
