@@ -161,7 +161,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <input 
               type="email" 
               placeholder="Email address" 
-              className="w-full bg-background border border-border rounded-xl py-3 px-4 text-sm focus:border-primary outline-none"
+                            className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
@@ -169,7 +169,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <input 
               type="password" 
               placeholder="Password" 
-              className="w-full bg-background border border-border rounded-xl py-3 px-4 text-sm focus:border-primary outline-none"
+                            className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
               value={password}
               onChange={e => setPassword(e.target.value)}
               required
