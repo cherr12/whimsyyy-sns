@@ -120,17 +120,24 @@ const Sidebar: React.FC<SidebarProps> = ({
         </div>
         <h1 className="text-xl font-bold tracking-tight text-foreground">
                 whimsyyy
-            {isPublicView && <span className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5">Guest</span>}
-        </h1>
-      </div>
-
-      <nav className="flex-1 space-y-2">
-        {menuItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = activeTab === item.id;
-          return (
-            <button
-              key={item.id}
+            {isPublicView && <span className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5">:122
+            </span>}
+              <button 
+        onClick={onTogglePublicView}
+        className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all ${
+          isPublicView 
+            ? 'bg-surface-highlight' : 'bg-primary text-white'
+        }`}
+      >
+        <span className={`font-bold text-lg ${
+          isPublicView 
+            ? 'text-primary' : 'text-white'
+        }`}>W</span>
+      </button>
+      <h1 className="text-xl font-bold tracking-tight text-foreground cursor-pointer" onClick={onTogglePublicView}>
+        whimsyyy
+        {isPublicView && <span className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5">Guest</span>}
+      </h1>      key={item.id}
               onClick={() => setActiveTab(item.id as any)}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                 isActive
