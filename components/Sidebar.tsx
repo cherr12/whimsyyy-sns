@@ -298,7 +298,6 @@ const Sidebar: React.FC<SidebarProps> = ({
                     
                     <button
                         onClick={() => {
-                        onAddAccount();
                         setIsUserMenuOpen(false);
                         }}
                         className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-muted hover:bg-surface-highlight hover:text-foreground transition-colors"
@@ -312,6 +311,18 @@ const Sidebar: React.FC<SidebarProps> = ({
                 </div>
                 )}
 
+                      {/* Sign In button - only visible in Guest mode */}
+      {isPublicView && (
+        <button
+          onClick={() => onAddAccount()}
+          className="w-full flex items-center gap-3 px-4 py-3 text-foreground hover:bg-accent rounded-lg transition-colors"
+        >
+          <LogIn className="h-5 w-5" />
+          <span>Sign In</span>
+        </button>
+      )}
+:1
+
                 <button 
                   onClick={onOpenSettings}
                   className="w-full flex items-center gap-3 px-4 py-3 text-muted hover:text-foreground transition-colors mb-1"
@@ -322,7 +333,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
                 <button 
                 onClick={() => setIsUserMenuOpen(!:170
-                    
+
                 )}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 border ${
                     isUserMenuOpen 
