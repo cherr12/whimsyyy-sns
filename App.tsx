@@ -170,7 +170,17 @@ function App() {
             onToggleHideUser={() => {}}
           onAddAccount={() => { setAuthModalOpen(true); }}
             isPublicView={isPublicView}
-            onTogglePublicView={() => isPublicView ? setAuthModalOpen(true) : authService.logout()}
+                      onTogglePublicView={() => {
+            if (isPublicView) {
+              if (currentUser) {
+                setIsPublicView(false);
+              } else {
+                setAuthModalOpen(true);
+              }
+            } else {
+              authService.logout();
+            }
+          }}
             onOpenSettings={() => { setSettingsModalOpen(true); setIsMenuOpen(false); }}
          />
       </div>
