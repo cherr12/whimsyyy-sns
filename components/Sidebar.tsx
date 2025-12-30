@@ -106,7 +106,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   const hiddenUsers = availableUsers.filter(u => u.isHidden && u.id !== currentUser.id);
 
   return (
-      <div className="flex flex-col w-64 h-screen bg-surface/80 backdrop-blur-md border-r border-border p-4 sticky top-0 transition-colors duration-200">      <div 
         className="flex items-center gap-3 mb-8 px-2 select-none cursor-pointer group"
         onMouseDown={(e) => { e.preventDefault(); isLogoPressedRef.current = true; }}
         onClick={handleLogoClick}
@@ -355,3 +354,4 @@ const Sidebar: React.FC<SidebarProps> = ({
 };
 
 export default Sidebar;
+109
