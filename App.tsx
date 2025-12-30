@@ -21,6 +21,13 @@ function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [isPublicView, setIsPublicView] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+
+    // Auto-switch to Master mode when user logs in
+      useEffect(() => {
+            if (currentUser) {
+                    setIsPublicView(false);
+                        }
+                          }, [currentUser]);
   
   const [theme, setTheme] = useState<Theme>('dark');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
