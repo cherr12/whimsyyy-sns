@@ -168,7 +168,7 @@ function App() {
             onSwitchUser={() => {}}
             onDeleteUser={() => {}}
             onToggleHideUser={() => {}}
-            onAddAccount={() => {} setAuthModalOpen(true); }
+          onAddAccount={() => { setAuthModalOpen(true); }}
             isPublicView={isPublicView}
             onTogglePublicView={() => isPublicView ? setAuthModalOpen(true) : authService.logout()}
             onOpenSettings={() => { setSettingsModalOpen(true); setIsMenuOpen(false); }}
