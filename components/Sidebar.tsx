@@ -106,7 +106,8 @@ const Sidebar: React.FC<SidebarProps> = ({
   const hiddenUsers = availableUsers.filter(u => u.isHidden && u.id !== currentUser.id);
 
   return (
-        className="flex items-center gap-3 mb-8 px-2 select-none cursor-pointer group"
+109
+        <div className="flex items-center gap-3 mb-8 px-2 select-none cursor-pointer group"
         onMouseDown={(e) => { e.preventDefault(); isLogoPressedRef.current = true; }}
         onClick={handleLogoClick}
       >
