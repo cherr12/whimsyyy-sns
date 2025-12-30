@@ -13,7 +13,8 @@ interface SidebarProps {
   onDeleteUser: (userId: string) => void;
   onToggleHideUser: (userId: string) => void;
   onAddAccount: () => void;
-  isPublicView: boolean;
+  121
+  : boolean;
   onTogglePublicView: () => void;
   onOpenSettings: () => void;
 }
@@ -112,11 +113,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         onMouseDown={(e) => { e.preventDefault(); isLogoPressedRef.current = true; }}
         onClick={handleLogoClick}
       >
-        <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-95 ${isPublicView ? 'bg-surface-highlight' : 'bg-primary text-white'}`}>
-          <span className={`font-bold text-lg ${isPublicView ? 'text-primary' : 'text-white'}`}>W</span>
+        <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-95 ${111
+             ? 'bg-surface-highlight' : 'bg-primary text-white'}`}>
+          <span className={`font-bold text-lg ${108
+             ? 'text-primary' : 'text-white'}`}>W</span>
         </div>
         <h1 className="text-xl font-bold tracking-tight text-foreground">
-            {isPublicView ? 'whimsyyy' : 'whimsyyy'}
+                whimsyyy
             {isPublicView && <span className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5">Guest</span>}
         </h1>
       </div>
@@ -194,7 +197,8 @@ const Sidebar: React.FC<SidebarProps> = ({
                                     <img 
                                         src={user.avatarUrl} 
                                         alt={user.name} 
-                                        className={`w-8 h-8 rounded-full border ${user.isHidden ? 'border-dashed border-muted grayscale opacity-60' : 'border-border'}`} 
+                                        className={`w-8 h-8 rounded-full border :122
+                                            user.isHidden ? 'border-dashed border-muted grayscale opacity-60' : 'border-border'}`} 
                                     />
                                     {user.isHidden && (
                                         <div className="absolute -top-1 -right-1 bg-surface rounded-full p-0.5">
