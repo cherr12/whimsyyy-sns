@@ -1,3 +1,4 @@
+97
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Home, PenTool, Settings, Link2, User as UserIcon, Plus, Check, ChevronUp, LogOut, Lock, Trash2, Eye, EyeOff, ChevronDown, UserX, LogIn } from 'lucide-react';
@@ -96,7 +97,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const menuItems = [
     { id: 'feed', icon: Home, label: 'Feed' },
-    ...(!isPublicView ? [
+    ...(!!isPublicView ? [
         { id: 'compose', icon: PenTool, label: 'Create' },
         { id: 'connections', icon: Link2, label: 'Connections' },
     ] : []),
