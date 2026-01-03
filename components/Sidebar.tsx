@@ -13,7 +13,6 @@ interface SidebarProps {
   onDeleteUser: (userId: string) => void;
   onToggleHideUser: (userId: string) => void;
   onAddAccount: () => void;
-  121
   : boolean;
   onTogglePublicView: () => void;
   onOpenSettings: () => void;
@@ -108,7 +107,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   const hiddenUsers = availableUsers.filter(u => u.isHidden && u.id !== currentUser.id);
 
   return (
-109
         <div className="flex items-center gap-3 mb-8 px-2 select-none cursor-pointer group"
         onMouseDown={(e) => { e.preventDefault(); isLogoPressedRef.current = true; }}
         onClick={handleLogoClick}
