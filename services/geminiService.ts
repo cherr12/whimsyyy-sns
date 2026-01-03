@@ -131,8 +131,7 @@ const generateImagesInternal = async (
   for (let i = 0; i < count; i++) {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image',
-        contents: contents,
+model: 'gemini-1.5-flash',        contents: contents,
         config: {
           imageConfig: {
             aspectRatio: "1:1",

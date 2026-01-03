@@ -347,7 +347,7 @@ const Composer: React.FC<ComposerProps> = ({ platforms, user, onPost, availableU
         // Convert images to base64 for persistence
         const base64Images = await Promise.all(images.map(fileToBase64));
         
-        let finalVideoUrl = undefined;
+        let finalVideoUrl = '';
         if (generatedVideo) {
             // Try to persist video as base64 too
             try {
