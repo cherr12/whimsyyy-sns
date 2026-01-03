@@ -90,14 +90,18 @@ function App() {
   const handlePost = async (content: string, platforms: PlatformType[], images: string[], videoUrl?: string, currentUser: any) => {
     if (!currentUser) return;
     try {
-      await dbService.addPost({
+const postData: any = {
         content,
         platforms,
         images,
-        videoUrl,
         author: currentUser,
         isHidden: false
-      });
+      };
+      // Only add videoUrl if it exists and is not the string "undefined"
+      if (videoUrl && videoUrl !== 'undefined') {
+        postData.videoUrl = videoUrl;
+      }
+      await dbService.addPost(postData);      });
       setActiveTab('feed');
       showNotification('Published to the cloud!', 'success');
     } catch (e) {
