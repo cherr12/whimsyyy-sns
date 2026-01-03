@@ -101,7 +101,7 @@ const postData: any = {
       if (videoUrl && videoUrl !== 'undefined') {
         postData.videoUrl = videoUrl;
       }
-      await dbService.addPost(postData));
+      await dbService.addPost(postData);
       setActiveTab('feed');
       showNotification('Published to the cloud!', 'success');
     } catch (e) {
