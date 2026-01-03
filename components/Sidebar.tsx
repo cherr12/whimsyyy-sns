@@ -133,8 +133,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       </button>
       <h1 className="text-xl font-bold tracking-tight text-foreground cursor-pointer" onClick={onTogglePublicView}>
         whimsyyy
-        {isPublicView && <span clas<button onClick={(e) => { e.stopPropagation(); onTogglePublicView(); }} className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5 hover:bg-accent transition-colors cursor-pointer">Guest</button>
-      </h1>:139
+            {isPublicView && <span onClick={(e) => { e.stopPropagation(); onTogglePublicView(); }} className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5 hover:bg-accent transition-colors cursor-pointer">Guest</span>}      </h1>:139
             key={item.id}
               onClick={() => setActiveTab(item.id as any)}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
