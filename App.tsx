@@ -87,7 +87,7 @@ function App() {
       setTimeout(() => setShowToast(null), 3000);
   };
 
-  const handlePost = async (content: string, platforms: PlatformType[], images: string[], videoUrl?: string) => {
+  const handlePost = async (content: string, platforms: PlatformType[], images: string[], videoUrl?: string, currentUser: any) => {
     if (!currentUser) return;
     try {
       await dbService.addPost({
