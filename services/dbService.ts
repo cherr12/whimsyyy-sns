@@ -33,8 +33,10 @@ export const dbService = {
     ensureConfig();
     try {
       const docRef = await addDoc(collection(db, POSTS_COLLECTION), {
-        ...postData,
-        createdAt: Date.now(),
+        // Filter out undefined values to avoid Firestore errors
+        ...(Object.fromEntries(
+          Object.entries(postData).filter(([_, v]) => v !== undefined)
+        ) as any),        createdAt: Date.now(),
         likes: 0,
         comments: 0,
         likedByMe: false,
