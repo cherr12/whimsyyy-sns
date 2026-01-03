@@ -192,8 +192,8 @@ model: 'gemini-1.5-flash',        contents: contents,
 // Video Generation (Veo)
 export const generateVideo = async (prompt: string): Promise<string | null> => {
   // IMPORTANT: Create a new instance right before the API call to ensure we use the latest injected API key.
-  const freshAi = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
-  
+  const apiKey = localStorage.getItem('gemini_api_key') || import.meta.env.VITE_API_KEY;
+  const freshAi = new GoogleGenAI({ apiKey });  
   try {
     let operation = await freshAi.models.generateVideos({
       model: 'veo-3.1-fast-generate-preview',

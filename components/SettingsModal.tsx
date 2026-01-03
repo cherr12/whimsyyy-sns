@@ -14,6 +14,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, currentT
   const [isExporting, setIsExporting] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+    const [geminiApiKey, setGeminiApiKey] = useState<string>(
+    localStorage.getItem('gemini_api_key') || ''
+  );
+
+    const handleApiKeySave = () => {
+    localStorage.setItem('gemini_api_key', geminiApiKey);
+  };
 
   if (!isOpen) return null;
 
