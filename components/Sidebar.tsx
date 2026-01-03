@@ -13,7 +13,6 @@ interface SidebarProps {
   onDeleteUser: (userId: string) => void;
   onToggleHideUser: (userId: string) => void;
   onAddAccount: () => void;
-  : boolean;
   onTogglePublicView: () => void;
   onOpenSettings: () => void;
 }
