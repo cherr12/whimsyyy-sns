@@ -117,8 +117,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         </div>
         <h1 className="text-xl font-bold tracking-tight text-foreground">
                 whimsyyy
-            {isPublicView && <span className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5">:122
-            </span>}
+            {isPublicView && <span className="ml-2 text-xs font-normal text-muted border border-border rounded px-1.5 py-0.5"hover:bg-accent transition-colors cursor-pointer">Guest</span>}
               <button 
         onClick={onTogglePublicView}
         className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all ${
