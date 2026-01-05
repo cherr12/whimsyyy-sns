@@ -358,7 +358,7 @@ const Composer: React.FC<ComposerProps> = ({ platforms, user, onPost, availableU
             }
         }
 
-      onPost(content, selectedPlatforms, base64Images, finalVideoUrl || '', selectedUser);        resetComposer();
+      onPost(content, selectedPlatforms, base64Images, finalVideoUrl || '', selectedAuthor);        resetComposer();
     } catch (e) {
         console.error("Failed to process post attachments", e);
     } finally {
