@@ -190,7 +190,7 @@ const postData: any = {
          />
       </div>
 
-      <main className="flex-1 overflow-y-auto h-screen" onClick={() => isMenuOpen && setIsMenuOpen(false)}>"flex-1 overflow-y-auto h-screen">
+      <main className="flex-1 overflow-y-auto h-screen" onClick={() => isMenuOpen && setIsMenuOpen(false)}>
         <div className="p-4 pt-24 max-w-4xl mx-auto">
           {/* Removed h1 header div that displayed "Cloud Feed" or "Discovery" */}
 
