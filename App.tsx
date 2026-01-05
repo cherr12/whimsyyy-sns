@@ -87,7 +87,7 @@ function App() {
       setTimeout(() => setShowToast(null), 3000);
   };
 
-  const handlePost = async (content: string, platforms: PlatformType[], images: string[], videoUrl?: string, currentUser: any) => {
+  const handlePost = async (content: string, platforms: PlatformType[], images: string[], videoUrl?: string) => {
     if (!currentUser) return;
     try {
 const postData: any = {
