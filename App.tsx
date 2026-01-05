@@ -163,7 +163,8 @@ const postData: any = {
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 hover:bg-surface-highlight rounded-lg text-muted"><Menu size={24} /></button>
       </div>
 
-      <div className={`fixed inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out shadow-2xl ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`fixed inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out shadow-2xl bg-surface 166
+      ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
          <Sidebar 
             activeTab={activeTab as any} 
             setActiveTab={(tab) => { setActiveTab(tab as any); setIsMenuOpen(false); }}
@@ -189,7 +190,7 @@ const postData: any = {
          />
       </div>
 
-      <main className="flex-1 overflow-y-auto h-screen">
+      <main className="flex-1 overflow-y-auto h-screen" onClick={() => isMenuOpen && setIsMenuOpen(false)}>"flex-1 overflow-y-auto h-screen">
         <div className="p-4 pt-24 max-w-4xl mx-auto">
           {/* Removed h1 header div that displayed "Cloud Feed" or "Discovery" */}
 
