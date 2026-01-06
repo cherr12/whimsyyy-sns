@@ -7,9 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
 <style>
-      body { font-family: 'Inter', sans-serif; }
+      12
+       font-family: 'Inter', sans-serif; }
       
-      :root {
+      :80
+      81
+      root {
         --background: 2 6 23;
         --surface: 15 23 42;
         --surface-highlight: 30 41 59;
@@ -77,6 +80,37 @@
       body {
         background: rgb(var(--background));
         color: rgb(var(--foreground));
+      }
+
+            /* Enhanced button visibility for all themes */
+      button, .button {
+        border: 1px solid rgb(var(--border)) !important;
+      }
+      
+      /* Floating action button - ensure visibility */
+      button[class*="fixed"][class*="bottom-"][class*="right-"] {
+        background-color: rgb(var(--accent)) !important;
+        color: white !important;
+        border: 2px solid rgb(var(--primary)) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+      }
+      
+      /* Post button in modal */
+      button[class*="bg-"][class*="primary"] {
+        background-color: rgb(var(--primary)) !important;
+        color: white !important;
+      }
+      
+      /* Light theme specific fixes */
+      .theme-light button[class*="fixed"][class*="bottom-"] {
+        background-color: rgb(var(--primary)) !important;
+        border-color: rgb(var(--primary)) !important;
+      }
+      
+      /* Princess Paint theme fixes */
+      .theme-pink button[class*="fixed"][class*="bottom-"] {
+        background-color: rgb(var(--primary)) !important;
+        border-color: rgb(var(--accent)) !important;
       }
     </style>
   </head>
