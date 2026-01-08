@@ -78,7 +78,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    document.body.classList.remove('theme-light', 'theme-green', 'theme-pink');
+    document.body.classList.remove('theme-light', 'theme-lego', 'theme-pink');
     if (theme !== 'dark') document.body.classList.add(`theme-${theme}`);
   }, [theme]);
 
