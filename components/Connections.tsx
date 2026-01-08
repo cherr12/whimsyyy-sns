@@ -20,7 +20,7 @@ const getIcon = (id: PlatformType) => {
   }
 };
 
-const Connections: React.FC<ConnectionsProps> = ({ platforms, toggleConnection, currentUser }) => {
+const Connections: React.FC<ConnectionsProps> = ({ platforms, toggConnection, currentUser }) => {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
