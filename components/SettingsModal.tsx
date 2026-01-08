@@ -27,7 +27,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, currentT
   const themes: { id: Theme; name: string; icon: React.ElementType; color: string }[] = [
     { id: 'dark', name: 'Dark', icon: Moon, color: 'bg-slate-900' },
     { id: 'light', name: 'Light', icon: Sun, color: 'bg-white border-2 border-slate-200' },
-    { id: 'green', name: 'Lego World', icon: LayoutGrid, color: 'bg-green-500 border-4 border-green-700' },
+    { id: 'lego', name: 'Lego World', icon: LayoutGrid, color: 'bg-green-500 border-4 border-green-700' },
     { id: 'pink', name: 'Princess Paint', icon: Palette, color: 'bg-pink-300 border-2 border-black' },
   ];
 
