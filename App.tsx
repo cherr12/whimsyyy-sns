@@ -80,8 +80,7 @@ function App() {
   useEffect(() => {
     document.body.classList.remove('theme-dark', 'theme-light', 'theme-lego', 'theme-pink');
     if (theme !== 'dark') document.body.classList.add(`theme-${theme}`);
-     [theme]);
-
+}, [theme]);
   const showNotification = (msg: string, type: 'success' | 'info') => {
       setShowToast({ msg, type });
       setTimeout(() => setShowToast(null), 3000);
