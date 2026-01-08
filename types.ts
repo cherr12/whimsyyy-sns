@@ -59,4 +59,4 @@ export interface AIResponse {
   hashtags: string[];
 }
 
-export type Theme = 'dark' | 'light' | 'green' | 'pink';
+export type Theme = 'dark' | 'light' | 'lego' | 'pink';
